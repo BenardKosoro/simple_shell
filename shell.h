@@ -96,7 +96,7 @@ typedef struct passinfo
 	list_t *history;
 
 	int cmd_buf_type; /* CMD_type ||, &&, ; */
-	int readfd
+	int readfd;
 	int histcount;
 	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
 } info_t;
