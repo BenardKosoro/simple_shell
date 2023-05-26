@@ -23,10 +23,6 @@
 #define HIST_FILE	".simple_shell_history"
 #define HIST_MAX	4096
 
-#define INFO_INIT \
-{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
-		0, 0, 0}
-
 /* for read/write buffers */
 #define READ_BUF_SIZE 1024
 #define WRITE_BUF_SIZE 1024
@@ -39,7 +35,6 @@
 #define CMD_CHAIN	3
 
 extern char **environ;
-
 
 /**
  * struct liststr - the singly linked list
@@ -75,7 +70,6 @@ typedef struct liststr
  * @linecount_flag: if on count this line of input
  * @fname: the program filename
  * @env: linked list local copy of environ
-
 */
 
 typedef struct passinfo
@@ -101,6 +95,9 @@ typedef struct passinfo
 	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
 } info_t;
 
+#define INFO_INIT \
+{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
+	0, 0, 0}
 /**
  * struct builtin - contains related func and builtin str
  * @type: builtin command flag
